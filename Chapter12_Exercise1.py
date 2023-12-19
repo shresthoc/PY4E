@@ -5,13 +5,13 @@ from bs4 import BeautifulSoup
 url = input('Enter a link -')
 try:
     if url.startswith('http://'):
-        hostname = host.split('/')
+        hostname = url.split('/')
         hostname = hostname[2]
         mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         mysock.connect((hostname, 80))
 
     elif url.startswith('https://'):
-        hostname = host.split('/')
+        hostname = url.split('/')
         hostname = hostname[2]
         mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         mysock.connect((hostname, 80))
